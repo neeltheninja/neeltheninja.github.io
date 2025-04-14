@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Your Affiliate Site for inquiries or feedback.">
-    <title>Contact - Your Affiliate Site</title>
+    <meta name="description" content="Contact Best Deals for inquiries or support.">
+    <title>Contact - Best Deals</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar (Same as index.html) -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="index.html">Your Affiliate Site</a>
+        <a class="navbar-brand" href="index.html">
+            <span class="logo-bd">
+                <span class="logo-b">B</span><span class="logo-d">D</span>
+            </span>
+            Best Deals
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,25 +28,20 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="reviews/">Reviews</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="categories.html">Categories</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Contact Form -->
+    <!-- Contact Content -->
     <div class="container my-5 pt-5">
-        <h1>Contact Us</h1>
-        <form action="https://formspree.io/your@email.com" method="POST">
+        <h1 class="text-center mb-4">Contact Us</h1>
+        <p class="text-center">Have questions? Reach out to us!</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="col-md-6 mx-auto">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required>
@@ -51,20 +51,18 @@
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">Message</label -label>
+                <label for="message">Message</label>
                 <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
         </form>
     </div>
 
-    <!-- Footer (Same as index.html) -->
+    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2023 Your Affiliate Site. All rights reserved.</p>
+        <p>© 2025 Best Deals. All rights reserved.</p>
         <p>
-            <a href="affiliate-disclosure.html" class="text-white">Affiliate Disclosure</a> |
-            <a href="privacy-policy.html" class="text-white">Privacy Policy</a> |
-            <a href="terms-of-service.html" class="text-white">Terms of Service</a>
+            <a href="affiliate-disclosure.html" class="text-white">Affiliate Disclosure</a>
         </p>
         <p>We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</p>
     </footer>
