@@ -16,26 +16,56 @@ body {
     color: #007bff !important;
 }
 
-.logo-bd {
-    display: inline-block;
-    margin-right: 5px;
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .logo-b {
-    display: inline-block;
-    transform: rotate(90deg);
+    font-size: 34px;
+    font-weight: 700;
     color: #007bff;
-    font-size: 28px;
-    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .logo-d {
-    display: inline-block;
+    font-size: 34px;
+    font-weight: 700;
     color: #28a745;
-    font-size: 28px;
-    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
+.logo-tag {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 10px;
+    background-color: #ff5733;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .logo-b {
+    color: #66b0ff;
+}
+
+body.dark-mode .logo-d {
+    color: #5cd85a;
+}
+
+body.dark-mode .logo-tag {
+    background-color: #ff8c66;
+}
 /* Hero Section */
 .jumbotron {
     background-image: url('../img/hero-bg.jpg');
