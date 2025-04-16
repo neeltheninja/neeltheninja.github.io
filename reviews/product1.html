@@ -3,77 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="In-depth review of Product 1 with pros, cons, and purchase options.">
-    <meta name="keywords" content="product 1 review, amazon affiliate, best product 1">
-    <title>Product 1 Review - Your Affiliate Site</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Detailed review of Product Name 1 with pros, cons, and purchase options.">
+    <title>Product Name 1 Review - Best Deals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <!-- Navigation Bar (Same as index.html) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="../index.html">Your Affiliate Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Reviews <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../blog/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Review Content -->
-    <div class="container my-5 pt-5">
-        <h1>Product 1 Review</h1>
-        <img src="../img/product1.jpg" class="img-fluid my-3" alt="Product 1">
-        <p>This is a detailed review of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <h3>Pros</h3>
-        <ul>
-            <li>High-quality performance</li>
-            <li>Easy to use</li>
-            <li>Affordable price</li>
-        </ul>
-        <h3>Cons</h3>
-        <ul>
-            <li>Limited color options</li>
-            <li>Slightly bulky design</li>
-        </ul>
-        <a href="https://www.amazon.com/your-affiliate-link" class="btn btn-success btn-lg my-3" target="_blank">Buy Now on Amazon</a>
-        <p><small>By purchasing through this link, you support our site at no extra cost to you.</small></p>
+    <label class="switch" for="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+    </label>
+    <div class="content">
+        <header>
+            <h1 class="logo">Best Deals</h1>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="../categories.html">Categories</a>
+                <a href="../contact.html">Contact</a>
+                <input type="search" placeholder="Search...">
+            </nav>
+        </header>
+        <main>
+            <section class="review">
+                <h2>Product Name 1 Review</h2>
+                <img src="../images/product1.jpg" alt="Product Name 1">
+                <p>Detailed review of Product Name 1. It offers great features such as...</p>
+                <h3>Pros</h3>
+                <ul>
+                    <li>High quality</li>
+                    <li>Affordable price</li>
+                    <li>Easy to use</li>
+                </ul>
+                <h3>Cons</h3>
+                <ul>
+                    <li>Limited color options</li>
+                </ul>
+                <a href="YOUR_AMAZON_AFFILIATE_LINK" class="btn">Buy on Amazon</a>
+                <p><small>*We earn a commission if you buy through this link.</small></p>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 Best Deals. All rights reserved.</p>
+            <p><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></p>
+        </footer>
     </div>
-
-    <!-- Footer (Same as index.html) -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2023 Your Affiliate Site. All rights reserved.</p>
-        <p>
-            <a href="../affiliate-disclosure.html" class="text-white">Affiliate Disclosure</a> |
-            <a href="../privacy-policy.html" class="text-white">Privacy Policy</a> |
-            <a href="../terms-of-service.html" class="text-white">Terms of Service</a>
-        </p>
-        <p>We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../js/script.js"></script>
 </body>
 </html>

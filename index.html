@@ -3,117 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the best deals on top products with expert reviews and recommendations.">
-    <meta name="keywords" content="best deals, amazon affiliate, product reviews, discounts">
-    <meta name="author" content="Best Deals Team">
-    <title>Best Deals - Your Source for Top Products</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Find the best deals on Amazon with expert reviews and recommendations.">
+    <title>Best Deals - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <nav class="navbar">
-            <a class="navbar-brand" href="index.html">
-                <span class="logo-container">
-                    <span class="logo-b">B</span>
-                    <span class="logo-d">D</span>
-                    <span class="logo-tag"></span>
-                </span>
-                Best Deals
-            </a>
-            <button class="navbar-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="navbar-menu">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="categories.html" class="nav-link">Categories</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="fade-in">Welcome to Best Deals</h1>
-                <p class="lead fade-in">Unlock unbeatable prices on top products with expert recommendations.</p>
-                <a href="categories.html" class="btn btn-primary fade-in">Shop Now</a>
-            </div>
-        </section>
-
-        <!-- Featured Products (Example Section) -->
-        <section class="products container">
-            <h2 class="section-title">Featured Deals</h2>
-            <div class="product-grid">
-                <div class="card fade-in">
-                    <img src="img/product1.jpg" alt="Product 1" loading="lazy">
-                    <h3>Product 1</h3>
-                    <p>Amazing deal on a top-rated item.</p>
-                    <a href="#" class="btn btn-secondary">View Deal</a>
+    <label class="switch" for="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+    </label>
+    <div class="content">
+        <header>
+            <h1 class="logo">Best Deals</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="contact.html">Contact</a>
+                <input type="search" placeholder="Search...">
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <h2>Find the Best Deals on Amazon</h2>
+                <p>Expert reviews and recommendations to help you save money.</p>
+                <a href="categories.html" class="btn">Explore Categories</a>
+            </section>
+            <section class="featured">
+                <h3>Featured Deals</h3>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/product1.jpg" alt="Product 1">
+                        <h4>Product Name 1</h4>
+                        <p>Short description.</p>
+                        <a href="reviews/product1.html" class="btn">Read Review</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/product2.jpg" alt="Product 2">
+                        <h4>Product Name 2</h4>
+                        <p>Short description.</p>
+                        <a href="reviews/product2.html" class="btn">Read Review</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/product3.jpg" alt="Product 3">
+                        <h4>Product Name 3</h4>
+                        <p>Short description.</p>
+                        <a href="reviews/product3.html" class="btn">Read Review</a>
+                    </div>
                 </div>
-                <div class="card fade-in">
-                    <img src="img/product2.jpg" alt="Product 2" loading="lazy">
-                    <h3>Product 2</h3>
-                    <p>Save big with this exclusive offer.</p>
-                    <a href="#" class="btn btn-secondary">View Deal</a>
+            </section>
+            <section class="featured-on">
+                <h3>Featured On</h3>
+                <div class="media-logos">
+                    <img src="images/media1.png" alt="Media 1">
                 </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials container">
-            <h2 class="section-title">What Our Users Say</h2>
-            <div class="testimonial-grid">
-                <blockquote class="fade-in">
-                    <p>"Best Deals helped me find the perfect product at an amazing price!"</p>
-                    <cite>- Jane D.</cite>
-                </blockquote>
-                <blockquote class="fade-in">
-                    <p>"The recommendations are spot on, and I love the dark mode!"</p>
-                    <cite>- John S.</cite>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- Newsletter Signup -->
-        <section class="newsletter container">
-            <h2 class="section-title">Stay Updated</h2>
-            <form class="newsletter-form fade-in">
-                <input type="email" placeholder="Enter your email" required aria-label="Email">
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content container">
-            <p>&copy; 2025 Best Deals. All rights reserved.</p>
-            <ul class="social-links">
-                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-            </ul>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 Best Deals. All rights reserved.</p>
             <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
-        </div>
-    </footer>
-
-    <!-- Back-to-Top Button -->
-    <a href="#" id="back-to-top" class="btn back-to-top" aria-label="Back to Top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+        </footer>
+    </div>
 </body>
 </html>
