@@ -9,43 +9,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <label class="switch" for="dark-mode-toggle">
-        <input type="checkbox" id="dark-mode-toggle">
-        <span class="slider"></span>
-    </label>
+    <header>
+        <h1 class="logo">Best Deals</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <input type="checkbox" id="dark-mode-toggle" style="display: none;">
+    <label for="dark-mode-toggle" class="switch-categories"></label>
     <div class="content">
-        <header>
-            <h1 class="logo">Best Deals</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="contact.html">Contact</a>
-                <input type="search" placeholder="Search...">
-            </nav>
-        </header>
         <main>
+            <section class="intro">
+                <h2>Explore Our Product Categories</h2>
+                <p>Discover a diverse selection of categories featuring the best Amazon deals, carefully curated to help you find exactly what you need at unbeatable prices.</p>
+            </section>
             <section class="categories">
-                <h2>Product Categories</h2>
+                <h3>Featured Categories</h3>
                 <div class="category-grid">
                     <div class="category">
-                        <h3>Electronics</h3>
-                        <a href="reviews/product1.html" class="btn">Browse Products</a>
+                        <h4>Electronics</h4>
+                        <p>Explore the latest gadgets, smart devices, and tech essentials.</p>
+                        <img src="images/electronics.jpg" alt="Electronics" class="category-image">
+                        <a href="reviews/product1.html" class="btn">Browse Now</a>
                     </div>
                     <div class="category">
-                        <h3>Home Appliances</h3>
-                        <a href="reviews/product2.html" class="btn">Browse Products</a>
+                        <h4>Home Appliances</h4>
+                        <p>Find top-quality kitchen tools and home comfort products.</p>
+                        <img src="images/appliances.jpg" alt="Home Appliances" class="category-image">
+                        <a href="reviews/product2.html" class="btn">Browse Now</a>
                     </div>
                     <div class="category">
-                        <h3>Books</h3>
-                        <a href="reviews/product3.html" class="btn">Browse Products</a>
+                        <h4>Books</h4>
+                        <p>Discover bestsellers, novels, and educational reads.</p>
+                        <img src="images/books.jpg" alt="Books" class="category-image">
+                        <a href="reviews/product3.html" class="btn">Browse Now</a>
+                    </div>
+                    <div class="category">
+                        <h4>Fashion</h4>
+                        <p>Shop trendy clothing, shoes, and accessories.</p>
+                        <img src="images/fashion.jpg" alt="Fashion" class="category-image">
+                        <a href="reviews/product4.html" class="btn">Browse Now</a>
                     </div>
                 </div>
             </section>
         </main>
         <footer>
             <p>© 2025 Best Deals. All rights reserved.</p>
-            <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
+            <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="terms-of-service.html">Terms of Service</a></p>
         </footer>
     </div>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93163f0c9dd3b077',t:'MTc0NDgzMzM4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

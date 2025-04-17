@@ -9,25 +9,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <label class="switch" for="dark-mode-toggle">
-        <input type="checkbox" id="dark-mode-toggle">
-        <span class="slider"></span>
-    </label>
+    <header>
+        <h1 class="logo">Best Deals</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <input type="checkbox" id="dark-mode-toggle" style="display: none;">
+    <label for="dark-mode-toggle" class="switch-index"></label>
     <div class="content">
-        <header>
-            <h1 class="logo">Best Deals</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="contact.html">Contact</a>
-                <input type="search" placeholder="Search...">
-            </nav>
-        </header>
         <main>
-            <section class="hero">
-                <h2>Find the Best Deals on Amazon</h2>
-                <p>Expert reviews and recommendations to help you save money.</p>
-                <a href="categories.html" class="btn">Explore Categories</a>
+            <section class="hero" style="background-image: url('images/hero-bg.jpg');">
+                <div class="hero-content">
+                    <h2>Unlock the Best Amazon Deals Today</h2>
+                    <p>Expert-curated reviews and exclusive discounts to maximize your savings.</p>
+                    <a href="categories.html" class="btn">Start Shopping</a>
+                </div>
             </section>
             <section class="featured">
                 <h3>Featured Deals</h3>
@@ -35,20 +34,56 @@
                     <div class="product">
                         <img src="images/product1.jpg" alt="Product 1">
                         <h4>Product Name 1</h4>
-                        <p>Short description.</p>
-                        <a href="reviews/product1.html" class="btn">Read Review</a>
+                        <p>Top-tier tech at an affordable price.</p>
+                        <a href="reviews/product1.html" class="btn">View Details</a>
                     </div>
                     <div class="product">
                         <img src="images/product2.jpg" alt="Product 2">
                         <h4>Product Name 2</h4>
-                        <p>Short description.</p>
-                        <a href="reviews/product2.html" class="btn">Read Review</a>
+                        <p>Cutting-edge design for daily use.</p>
+                        <a href="reviews/product2.html" class="btn">View Details</a>
                     </div>
                     <div class="product">
                         <img src="images/product3.jpg" alt="Product 3">
                         <h4>Product Name 3</h4>
-                        <p>Short description.</p>
-                        <a href="reviews/product3.html" class="btn">Read Review</a>
+                        <p>Latest innovation with premium features.</p>
+                        <a href="reviews/product3.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </section>
+            <section class="trending">
+                <h3>Trending Deals</h3>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/product4.jpg" alt="Product 4">
+                        <h4>Product Name 4</h4>
+                        <p>Hot deal of the week!</p>
+                        <a href="reviews/product4.html" class="btn">Check It Out</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/product5.jpg" alt="Product 5">
+                        <h4>Product Name 5</h4>
+                        <p>Limited time offer.</p>
+                        <a href="reviews/product5.html" class="btn">Check It Out</a>
+                    </div>
+                </div>
+            </section>
+            <section class="call-to-action">
+                <h3>Get Exclusive Offers</h3>
+                <p>Subscribe to our newsletter for the latest deals and updates.</p>
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe Now</button>
+                </form>
+            </section>
+            <section class="testimonials">
+                <h3>Customer Testimonials</h3>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"Amazing deals and detailed reviews!" - Sarah K.</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Saved me so much money—highly recommend!" - Mike T.</p>
                     </div>
                 </div>
             </section>
@@ -56,13 +91,14 @@
                 <h3>Featured On</h3>
                 <div class="media-logos">
                     <img src="images/media1.png" alt="Media 1">
+                    <img src="images/media2.png" alt="Media 2">
                 </div>
             </section>
         </main>
         <footer>
             <p>© 2025 Best Deals. All rights reserved.</p>
-            <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
+            <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="terms-of-service.html">Terms of Service</a></p>
         </footer>
     </div>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93163f0c2f14bfba',t:'MTc0NDgzMzM4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

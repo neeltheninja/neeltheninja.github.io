@@ -9,23 +9,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <label class="switch" for="dark-mode-toggle">
-        <input type="checkbox" id="dark-mode-toggle">
-        <span class="slider"></span>
-    </label>
+    <header>
+        <h1 class="logo">Best Deals</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <input type="checkbox" id="dark-mode-toggle" style="display: none;">
+    <label for="dark-mode-toggle" class="switch-contact"></label>
     <div class="content">
-        <header>
-            <h1 class="logo">Best Deals</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="contact.html">Contact</a>
-                <input type="search" placeholder="Search...">
-            </nav>
-        </header>
         <main>
             <section class="contact">
                 <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1b2b4b1b1aeb3b581a3a4b2b5a5a4a0adb2efa2aeac">[email protected]</a></p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Address:</strong> 123 Deal St, Shopville, USA</p>
+                </div>
                 <form action="https://formspree.io/f/your-form-id" method="POST">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -35,12 +37,15 @@
                     <textarea id="message" name="message" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
+                <div class="map-placeholder">
+                    <p>[Map Placeholder - Add Google Maps Embed Here]</p>
+                </div>
             </section>
         </main>
         <footer>
             <p>© 2025 Best Deals. All rights reserved.</p>
-            <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
+            <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="terms-of-service.html">Terms of Service</a></p>
         </footer>
     </div>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93163f10be4a44e8',t:'MTc0NDgzMzM5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

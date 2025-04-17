@@ -11,185 +11,391 @@ body {
     background-color: #fff;
     color: #000;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-/* Dark Mode Toggle */
-.switch {
-    position: fixed;
-    top: 1.5em;
-    right: 1.5em;
-    width: 50px;
-    height: 50px;
+label.switch-index, label.switch-categories, label.switch-disclosure, label.switch-contact, label.switch-terms {
+    position: absolute;
+    top: 1em;
+    right: 3em;
     z-index: 1000;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+/* Dark Mode Toggle Base Styles */
+input[type="checkbox"] {
+    display: none;
 }
 
-.switch label {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+label {
     cursor: pointer;
-    border-radius: 50%;
-    background-color: #ccc;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    margin-left: 1.5em;
+    transition: all 0.3s ease;
 }
 
-.switch label::before,
-.switch label::after {
+/* Index Page Toggle (Square with Star/Moon) */
+.switch-index {
+    width: 40px;
+    height: 40px;
+    background: #ffd700;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.switch-index::before {
     content: '';
     position: absolute;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.switch label::before {
-    /* Moon icon */
-    width: 20px;
-    height: 20px;
-    border: 4px solid #fff;
-    border-radius: 50%;
     top: 50%;
     left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
     transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.switch-index::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
     background: #333;
 }
 
-.switch label::after {
-    /* Sun rays (hidden in dark mode) */
-    width: 6px;
-    height: 6px;
-    background: #fff;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 
-        0 -15px 0 0 #fff,
-        0 15px 0 0 #fff,
-        -15px 0 0 0 #fff,
-        15px 0 0 0 #fff,
-        -10px -10px 0 0 #fff,
-        10px -10px 0 0 #fff,
-        -10px 10px 0 0 #fff,
-        10px 10px 0 0 #fff;
-    opacity: 1;
+#dark-mode-toggle:checked + .switch-index {
+    background: #333;
 }
 
-#dark-mode-toggle:checked + label.switch {
-    background-color: #ffcc00; /* Sun color for light mode */
-    transform: rotate(360deg);
+#dark-mode-toggle:checked + .switch-index::before {
+    transform: translate(-50%, -50%) scale(0);
 }
 
-#dark-mode-toggle:checked + label.switch::before {
-    opacity: 0; /* Hide moon in light mode */
+#dark-mode-toggle:checked + .switch-index::after {
+    transform: translate(-50%, -50%) scale(1);
 }
 
-#dark-mode-toggle:checked + label.switch::after {
-    opacity: 0; /* Hide sun rays in dark mode */
-}
-
-#dark-mode-toggle:checked + label.switch ~ .content body,
-#dark-mode-toggle:checked + label.switch ~ .content {
+#dark-mode-toggle:checked ~ .content,
+#dark-mode-toggle:checked ~ .content body {
     background-color: #000 !important;
     color: #fff !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content header {
+/* Categories Page Toggle (Hexagon with Crescent/Sun) */
+.switch-categories {
+    width: 40px;
+    height: 40px;
+    background: #ff6347;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.switch-categories::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50% 0 0 50% / 50% 0 0 50%;
+    transform: translate(-60%, -50%);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.switch-categories::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #fff;
+}
+
+#dark-mode-toggle:checked + .switch-categories {
+    background: #4682b4;
+}
+
+#dark-mode-toggle:checked + .switch-categories::before {
+    transform: translate(-60%, -50%) scale(0);
+}
+
+#dark-mode-toggle:checked + .switch-categories::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#dark-mode-toggle:checked ~ .content,
+#dark-mode-toggle:checked ~ .content body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Affiliate Disclosure Page Toggle (Triangle with Half-Moon/Sunburst) */
+.switch-disclosure {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid #6a5acd;
+    position: relative;
+}
+
+.switch-disclosure::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50% 0 0 50% / 50% 0 0 50%;
+    transform: translate(-70%, -50%);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.switch-disclosure::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #fff;
+}
+
+#dark-mode-toggle:checked + .switch-disclosure {
+    border-bottom-color: #ff4500;
+}
+
+#dark-mode-toggle:checked + .switch-disclosure::before {
+    transform: translate(-70%, -50%) scale(0);
+}
+
+#dark-mode-toggle:checked + .switch-disclosure::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#dark-mode-toggle:checked ~ .content,
+#dark-mode-toggle:checked ~ .content body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Contact Page Toggle (Diamond with Cloud/Night Sky) */
+.switch-contact {
+    width: 40px;
+    height: 40px;
+    background: #20b2aa;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.switch-contact::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 20px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50% 50% 0 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.switch-contact::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
+    box-shadow: 10px 0 0 #000, -10px 0 0 #000;
+}
+
+#dark-mode-toggle:checked + .switch-contact {
+    background: #483d8b;
+}
+
+#dark-mode-toggle:checked + .switch-contact::before {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#dark-mode-toggle:checked + .switch-contact::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#dark-mode-toggle:checked ~ .content,
+#dark-mode-toggle:checked ~ .content body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Terms of Service Page Toggle (Octagon with Gear/Crescent) */
+.switch-terms {
+    width: 40px;
+    height: 40px;
+    background: #dc143c;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.switch-terms::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 0 #fff, -5px 5px 0 #fff, 5px -5px 0 #fff, -5px -5px 0 #fff;
+}
+
+.switch-terms::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50% 0 0 50% / 50% 0 0 50%;
+    transform: translate(-60%, -50%) scale(0);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+#dark-mode-toggle:checked + .switch-terms {
+    background: #8a2be2;
+}
+
+#dark-mode-toggle:checked + .switch-terms::before {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#dark-mode-toggle:checked + .switch-terms::after {
+    transform: translate(-60%, -50%) scale(1);
+}
+
+#dark-mode-toggle:checked ~ .content,
+#dark-mode-toggle:checked ~ .content body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Dark Mode Functionality (Common Styles) */
+#dark-mode-toggle:checked ~ .content header {
     background-color: #333 !important;
     border-bottom: 1px solid #555 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .logo {
+#dark-mode-toggle:checked ~ .content .logo {
     color: #fff !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content nav a {
+#dark-mode-toggle:checked ~ .content nav a {
     color: #fff !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .btn {
+#dark-mode-toggle:checked ~ .content .btn {
     background-color: #fff !important;
     color: #000 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .btn:hover {
+#dark-mode-toggle:checked ~ .content .btn:hover {
     background-color: #ccc !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .product {
+#dark-mode-toggle:checked ~ .content .product {
     background-color: #222 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .product:hover {
+#dark-mode-toggle:checked ~ .content .product:hover {
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2) !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .category {
+#dark-mode-toggle:checked ~ .content .category {
     border-color: #555 !important;
     background-color: #222 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .category:hover {
+#dark-mode-toggle:checked ~ .content .category:hover {
     box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2) !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .trending {
+#dark-mode-toggle:checked ~ .content .trending {
     background-color: #111 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .call-to-action {
+#dark-mode-toggle:checked ~ .content .call-to-action {
     background-color: #222 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .call-to-action input[type="email"] {
+#dark-mode-toggle:checked ~ .content .call-to-action input[type="email"] {
     background-color: #333 !important;
     border-color: #555 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .testimonials {
+#dark-mode-toggle:checked ~ .content .testimonials {
     background-color: #222 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .testimonial {
+#dark-mode-toggle:checked ~ .content .testimonial {
     background-color: #333 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .testimonial p {
+#dark-mode-toggle:checked ~ .content .testimonial p {
     color: #ccc !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .featured-on {
+#dark-mode-toggle:checked ~ .content .featured-on {
     background-color: #111 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content footer {
+#dark-mode-toggle:checked ~ .content footer {
     background-color: #333 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content footer a {
+#dark-mode-toggle:checked ~ .content footer a {
     color: #fff !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .contact {
+#dark-mode-toggle:checked ~ .content .contact {
     background-color: #111 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .contact input,
-#dark-mode-toggle:checked + label.switch ~ .content .contact textarea {
+#dark-mode-toggle:checked ~ .content .contact input,
+#dark-mode-toggle:checked ~ .content .contact textarea {
     background-color: #333 !important;
     color: #fff !important;
     border-color: #555 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .terms {
+#dark-mode-toggle:checked ~ .content .terms {
     background-color: #111 !important;
 }
 
-#dark-mode-toggle:checked + label.switch ~ .content .intro {
+#dark-mode-toggle:checked ~ .content .intro {
     background-color: #111 !important;
 }
 
@@ -585,6 +791,10 @@ footer a:hover {
     }
     nav a {
         margin: 0.7em 0;
+    }
+    label.switch-index, label.switch-categories, label.switch-disclosure, label.switch-contact, label.switch-terms {
+        top: 0.5em;
+        right: 1em;
     }
     .hero h2 {
         font-size: 2.2em;
