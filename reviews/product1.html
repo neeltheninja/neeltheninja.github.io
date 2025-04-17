@@ -5,45 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Detailed review of Product Name 1 with pros, cons, and purchase options.">
     <title>Product Name 1 Review - Best Deals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <!-- Header with Navigation and Dark Mode Switch -->
     <header>
+        <h1 class="logo">Best Deals</h1>
         <nav>
             <a href="../index.html">Home</a>
             <a href="../categories.html">Categories</a>
             <a href="../contact.html">Contact</a>
-            <label class="dark-mode-switch">
-                <input type="checkbox" id="dark-mode-toggle">
-                <span class="switch-label">Dark Mode</span>
-            </label>
         </nav>
     </header>
-
-    <!-- Review Content -->
-    <section class="review">
-        <h1>Product Name 1 Review</h1>
-        <img src="../images/product1.jpg" alt="Product Name 1">
-        <p>This is a detailed review of Product Name 1. It offers great features such as...</p>
-        <h2>Pros</h2>
-        <ul>
-            <li>High quality</li>
-            <li>Affordable price</li>
-            <li>Easy to use</li>
-        </ul>
-        <h2>Cons</h2>
-        <ul>
-            <li>Limited color options</li>
-        </ul>
-        <a href="YOUR_AMAZON_AFFILIATE_LINK" class="btn affiliate-btn">Buy on Amazon</a>
-        <p><small>*We earn a commission if you buy through this link.</small></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Best Deals. All rights reserved.</p>
-        <p><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></p>
-    </footer>
+    <input type="checkbox" id="dark-mode-toggle" style="display: none;">
+    <label for="dark-mode-toggle" class="switch-product1"></label>
+    <div class="notification-bar">
+        <p>🎉 Limited Time Offer: Get exclusive deals by subscribing to our newsletter! <a href="../index.html#call-to-action">Sign up now</a>.</p>
+        <button class="dismiss-btn">✕</button>
+    </div>
+    <div class="content">
+        <main>
+            <section class="review">
+                <h2>Product Name 1 Review</h2>
+                <img src="../images/product1.jpg" alt="Product Name 1" class="product-image">
+                <p>This is a detailed review of Product Name 1. It offers great features such as high performance, durability, and user-friendly design, making it a top choice for tech enthusiasts.</p>
+                <h3>Pros</h3>
+                <ul>
+                    <li>High quality and reliable performance</li>
+                    <li>Affordable price for its features</li>
+                    <li>Easy to use with intuitive controls</li>
+                </ul>
+                <h3>Cons</h3>
+                <ul>
+                    <li>Limited color options</li>
+                </ul>
+                <a href="YOUR_AMAZON_AFFILIATE_LINK" class="btn affiliate-btn">Buy on Amazon</a>
+                <p><small>*We earn a commission if you buy through this link.</small></p>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 Best Deals. All rights reserved.</p>
+            <p><a href="../affiliate-disclosure.html">Affiliate Disclosure</a> | <a href="../terms-of-service.html">Terms of Service</a></p>
+        </footer>
+    </div>
+    <script>
+        document.querySelector('.dismiss-btn').addEventListener('click', function() {
+            document.querySelector('.notification-bar').style.display = 'none';
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'931e0e29994cada4',t:'MTc0NDkxNTI3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
